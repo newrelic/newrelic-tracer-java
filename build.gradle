@@ -36,14 +36,7 @@ dependencies {
     //todo: replace this with the published version, when we publish it.
     implementation(":opentelemetry-exporters-newrelic:0.1.0-SNAPSHOT")
 
-    //todo: remove these when the w3c trace context fixes are done.
-    implementation(":opentelemetry-sdk:0.1.0-SNAPSHOT")
-    implementation(":opentelemetry-proto:0.1.0-SNAPSHOT")
-    implementation("com.google.guava:guava:20.0")
-    implementation("com.google.protobuf:protobuf-java-util:3.7.1")
-
-    //todo: when the w3c trace context fixes are in, depend on the official version.
-//    implementation("io.opentelemetry:opentelemetry-sdk:0.1.0-SNAPSHOT")
+    implementation("io.opentelemetry:opentelemetry-sdk:0.1.0-SNAPSHOT")
 
     implementation("io.opentelemetry:opentelemetry-opentracing-shim:0.1.0-SNAPSHOT")
     implementation("io.opentelemetry:opentelemetry-contrib-trace-utils:0.1.0-SNAPSHOT")
