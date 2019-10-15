@@ -12,6 +12,9 @@ Data collected by the Tracer is sent to New Relic by the [New Relic OpenTelemetr
 
 See [Instrumentation plugins](https://github.com/opentracing-contrib/java-specialagent#61-instrumentation-plugins) and [rules](https://github.com/opentracing-contrib/java-specialagent#63-instrumented-libraries-by-existing-rules) for lists of all instrumentation provided by the SpecialAgent.
 
+## CI
+PR and master builds run on Azure Pipelines: [![Build Status](https://dev.azure.com/NRAzurePipelines/Java%20CI/_apis/build/status/PR%20Build%20for%20OT%20Tracer%20plugin?branchName=master)](https://dev.azure.com/NRAzurePipelines/Java%20CI/_build/latest?definitionId=13&branchName=master)
+
 ## Getting Started: Requirements
 * Java 8 or greater
 
