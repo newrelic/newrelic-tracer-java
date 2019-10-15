@@ -1,5 +1,5 @@
 # PR + Master build
-name: PR Build for New Relic OpenTelemetry Java Exporters
+name: PR Build for New Relic OpenTracing specialagent plugin
 pr:
   branches:
     include:
