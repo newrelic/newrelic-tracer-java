@@ -12,7 +12,6 @@ See [Instrumentation plugins](https://github.com/opentracing-contrib/java-specia
 
 ## Getting Started: Requirements
 * Java 8 or greater
-* This project currently relies on a few jars included in `newrelic-tracer-java/libs` that have yet to be published to maven central
 
 ## Building
 
