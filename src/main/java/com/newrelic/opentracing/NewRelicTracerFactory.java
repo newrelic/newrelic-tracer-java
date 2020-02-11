@@ -9,7 +9,7 @@ import com.newrelic.telemetry.Attributes;
 import com.newrelic.telemetry.opentelemetry.export.NewRelicSpanExporter;
 import io.opentelemetry.opentracingshim.TraceShim;
 import io.opentelemetry.sdk.distributedcontext.DistributedContextManagerSdk;
-import io.opentelemetry.sdk.trace.TracerSdk;
+import io.opentelemetry.sdk.trace.TracerSdkFactory;
 import io.opentelemetry.sdk.trace.export.BatchSpansProcessor;
 import io.opentelemetry.sdk.trace.export.SpanExporter;
 import io.opentracing.Tracer;
@@ -45,16 +45,18 @@ public class NewRelicTracerFactory implements TracerFactory {
                 commonAttributes.put("service.name", serviceName);
             }
 
-            TracerSdk openTelemetryTracer = new TracerSdk();
-            SpanExporter newRelicExporter = NewRelicSpanExporter.newBuilder()
+            SpanExporter newRelicSpanExporter = NewRelicSpanExporter.newBuilder()
                     .apiKey(apiKey)
                     .enableAuditLogging()
                     .commonAttributes(commonAttributes)
                     .build();
-            openTelemetryTracer.addSpanProcessor(BatchSpansProcessor.newBuilder(newRelicExporter).build());
-            Tracer tracer = TraceShim.createTracerShim(openTelemetryTracer, new DistributedContextManagerSdk());
-            logger.log(Level.INFO, "Created New Relic Tracer: " + tracer);
-            return tracer;
+
+            TracerSdkFactory tracerSdkFactory = TracerSdkFactory.create();
+            tracerSdkFactory.addSpanProcessor(BatchSpansProcessor.newBuilder(newRelicSpanExporter).build());
+            Tracer newRelicTracer = TraceShim.createTracerShim(tracerSdkFactory, new DistributedContextManagerSdk());
+
+            logger.log(Level.INFO, "Created New Relic Tracer: " + newRelicTracer);
+            return newRelicTracer;
         } catch (Exception e) {
             logger.log(Level.SEVERE, "Failed to create a New Relic Tracer instance: " + e);
             return null;
