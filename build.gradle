@@ -24,8 +24,8 @@ repositories {
             snapshotsOnly()
         }
     }
-    flatDir {
-        dirs("libs")
+    maven {
+        url = "https://oss.sonatype.org/content/repositories/snapshots"
     }
 }
 

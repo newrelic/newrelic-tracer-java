@@ -1,17 +1,21 @@
 # New Relic OpenTracing Tracer Plugin
 
-An OpenTracing [TracerFactory](https://github.com/opentracing-contrib/java-tracerresolver) that utilizes the OpenTracing [TracerShim](https://github.com/open-telemetry/opentelemetry-java/blob/master/opentracing_shim/src/main/java/io/opentelemetry/opentracingshim/TracerShim.java) to convert to an OpenTelemetry Tracer. This functions as a [Tracer Plugin](https://github.com/opentracing-contrib/java-specialagent#43-tracer-plugin) for the [Java SpecialAgent](https://github.com/opentracing-contrib/java-specialagent) which provides automatic OpenTracing-based instrumentation for 3rd-party Java libraries.
+An OpenTracing [TracerFactory](https://github.com/opentracing-contrib/java-tracerresolver) that utilizes the OpenTelemetry [TracerShim](https://github.com/open-telemetry/opentelemetry-java/blob/master/opentracing_shim/src/main/java/io/opentelemetry/opentracingshim/TracerShim.java) 
+to convert to an OpenTelemetry Tracer. This functions as a [Tracer Plugin](https://github.com/opentracing-contrib/java-specialagent#43-tracer-plugin) 
+for the [Java SpecialAgent](https://github.com/opentracing-contrib/java-specialagent) which provides automatic OpenTracing-based instrumentation for 3rd-party Java libraries.
  
-Data collected by the Tracer is sent to New Relic by the [New Relic OpenTelemetry Exporter](https://github.com/newrelic/opentelemetry-exporters-newrelic) (to be publicly released soon).
+Data collected by the Tracer is sent to New Relic by the [New Relic OpenTelemetry Exporter](https://github.com/newrelic/opentelemetry-exporters-newrelic).
 
 ### Provided Instrumentation
 
 See [Instrumentation plugins](https://github.com/opentracing-contrib/java-specialagent#61-instrumentation-plugins) and [rules](https://github.com/opentracing-contrib/java-specialagent#63-instrumented-libraries-by-existing-rules) for lists of all instrumentation provided by the SpecialAgent.
 
+## CI
+PR and master builds run on Azure Pipelines: [![Build Status](https://dev.azure.com/NRAzurePipelines/Java%20CI/_apis/build/status/PR%20Build%20for%20OT%20Tracer%20plugin?branchName=master)](https://dev.azure.com/NRAzurePipelines/Java%20CI/_build/latest?definitionId=13&branchName=master)
+
 ## Getting Started: Requirements
 
 * Java 8 or greater
-* This project currently relies on a few jars included in `newrelic-tracer-java/libs` that have yet to be published to maven central
 
 ## Building
 
