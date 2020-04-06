@@ -47,7 +47,7 @@ To use the Tracer Plugin with the [Java Special Agent for OpenTracing](https://g
 
 ## Testing
 
-`TODO`
+`LGTM!`
 
 ## Configuration
 
