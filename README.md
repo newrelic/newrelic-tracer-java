@@ -16,7 +16,7 @@ See [Instrumentation plugins](https://github.com/opentracing-contrib/java-specia
 
 ## Getting Started
 
->[Simple steps to start working with the software similar to a "Hello World"]
+See [Usage](#usage)
 
 ## Usage
 
@@ -85,8 +85,6 @@ List of all configurable Tracer properties
 
 ## Testing
 
->[**Optional** - Include instructions on how to run tests if we include tests with the codebase. Remove this section if it's not needed.]
-
 `TODO`
 
 ## Support
@@ -111,7 +109,7 @@ For more information, review [New Relic’s General Data Privacy Notice](https:/
 
 ## Contribute
 
-We encourage your contributions to improve [project name]! Keep in mind that when you submit your pull request, you'll need to sign the CLA via the click-through using CLA-Assistant. You only have to sign the CLA one time per project.
+We encourage your contributions to improve newrelic-tracer-java! Keep in mind that when you submit your pull request, you'll need to sign the CLA via the click-through using CLA-Assistant. You only have to sign the CLA one time per project.
 
 If you have any questions, or to execute our corporate CLA (which is required if your contribution is on behalf of a company), drop us an email at opensource@newrelic.com.
 
@@ -127,7 +125,7 @@ To [all contributors](https://github.com/newrelic/newrelic-tracer-java/graphs/co
 
 ### Licensing
 
-The New Relic OpenTracing Tracer Plugin is licensed under the Apache 2.0 License.
+The newrelic-tracer-java is licensed under the Apache 2.0 License.
 
-The New Relic OpenTracing Tracer Plugin may use source code from third party libraries.
+The newrelic-tracer-java may use source code from third party libraries.
 Full details on which libraries are used and the terms under which they are licensed can be found in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
